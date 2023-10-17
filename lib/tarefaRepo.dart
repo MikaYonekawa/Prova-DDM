@@ -12,7 +12,7 @@ class TarefaRepo {
   static imprimir() {
     print(get_listTarefa.toString());
   }
-  static remover(Tarefa tarefa){
-    _listTarefa.remove(tarefa);
+  static remover(){
+    _listTarefa.clear();
   }
 }

@@ -98,8 +98,7 @@ class _MyCadastroState extends State<MyCadastro> {
             SizedBox(
               height: 30,
             ),
-            SizedBox(
-              height: 100,
+            Expanded(
               child: ListView.separated(
                   itemBuilder: (context, index) {
                     return ListTile(
@@ -119,6 +118,7 @@ class _MyCadastroState extends State<MyCadastro> {
             ElevatedButton(
                 onPressed: () {
                   listBusca.clear();
+                  TarefaRepo.remover();
                   _formKey.currentState!.reset();
                   campoNome.clear();
                   listBusca = [];
